@@ -1,0 +1,26 @@
+{
+  "name": "@logisticinfotech/react-native-horizontal-date-picker",
+  "version": "1.0.0",
+  "description": "Horizontal date and time picker for React Native.",
+  "main": "HorizontalDatePicker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/logisticinfotech/react-native-datetimepicker.git"
+  },
+  "keywords": [
+    "React Native",
+    "Picker",
+    "Date Picker",
+    "Time Picker",
+    "Horizontal Picker"
+  ],
+  "author": "Shubham Vala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/logisticinfotech/react-native-datetimepicker/issues"
+  },
+  "homepage": "https://github.com/logisticinfotech/react-native-datetimepicker#readme"
+}
