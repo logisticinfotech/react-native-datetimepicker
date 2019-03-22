@@ -14,6 +14,13 @@ https://github.com/logisticinfotech/react-native-datetimepicker
 
 # Guide
 
+# Prerequisite
+you need to install below librabry before use.
+```
+npm i moment
+
+```
+
 # Installation
 ```
 npm i @logisticinfotech/react-native-horizontal-date-picker
