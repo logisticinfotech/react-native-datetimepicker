@@ -43,25 +43,25 @@ import HorizontalDatePicker from "@logisticinfotech/react-native-horizontal-date
 
 | Prop | Default | Type | Description |
 | ------ | -------- | ----- | ------------- |
-| pickerType | datetime | enum of `["date","time","datetime"]` | type of the picker user want to display <br />  |
-| minDate | current date | `Date` | minimum date from picker value start |
-| maxDate | 3 months from current date | `Date` | maximum date upto picker value display |
-| isShowYear | true | `bool` | dispay year above picker |
-| yearContainerStyle | null | `style` | style of the year container |
-| datePickerContainerStyle | null | `style` | style of the picker |
-| yearTextStyle | null | `style` | style of the year display |
-| selectedTextStyle | null | `style` | style of the selected date or time |
-| unSelectedTextStyle | null | `style` | style of the non selected date or time |
-| datePickerBG | null | `object` or `reference` | background image of date picker |
-| timePikerBG | null |  `object` or `reference` | background image of time picker |
-| dayFormat | Do | `string` | formate of date to display |
-| monthFormat | MMM | `string` | formate of month to display |
-| yearFormat | yyyy | `string` | formate of year to display |
-| timeFormat | HH:mm | `string` | formate of time to display |
-| timeStep | 60 | `number` | amount of the time divide in minutes for time picker |
-| returnDateFormat | DD-MM-YYYY | `string` | return formate of the date selected |
-| returnTimeFormat | hh:mm a | `string` | return formate of the time selected |
-| returnDateTimeFormat | DD-MM-YYYY hh:mm a | `string` | return formate of the full datetime selected |
-| onDateSelected | () => null | `function` | return date when date is selected |
-| onTimeSelected | () => null | `function` | return time when date is selected |
-| onDateTimeSelected | () => null | `function` | return object of date,time and datetime when date or time is selected |
+| pickerType | datetime | enum of `["date","time","datetime"]` | Type of the picker user want to display.  |
+| minDate | current date | `Date` | Minimum date from picker value start. |
+| maxDate | 3 months from current date | `Date` | Maximum date upto picker value display. |
+| isShowYear | true | `bool` | Dispay year above picker. |
+| yearContainerStyle | null | `style` | Style of the year container. |
+| datePickerContainerStyle | null | `style` | Style of the picker. |
+| yearTextStyle | null | `style` | Style of the year display. |
+| selectedTextStyle | null | `style` | Style of the selected date or time. |
+| unSelectedTextStyle | null | `style` | Style of the non selected date or time. |
+| datePickerBG | null | `object` or `reference` | Background image of date picker. |
+| timePikerBG | null |  `object` or `reference` | Background image of time picker. |
+| dayFormat | Do | `string` | Format of date to display. |
+| monthFormat | MMM | `string` | Format of month to display. |
+| yearFormat | yyyy | `string` | Format of year to display. |
+| timeFormat | HH:mm | `string` | Format of time to display. |
+| timeStep | 60 | `number` | Amount of the time divide in minutes for time picker. |
+| returnDateFormat | DD-MM-YYYY | `string` | Return formate of the date selected. |
+| returnTimeFormat | hh:mm a | `string` | Return formate of the time selected. |
+| returnDateTimeFormat | DD-MM-YYYY hh:mm a | `string` | Return formate of the full datetime selected. |
+| onDateSelected | () => null | `function` | Return date when date is selected. |
+| onTimeSelected | () => null | `function` | Return time when date is selected. |
+| onDateTimeSelected | () => null | `function` | Return object of date, time and datetime when date or time is selected. |
