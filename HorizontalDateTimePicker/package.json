@@ -23,7 +23,4 @@
     "url": "https://github.com/logisticinfotech/react-native-datetimepicker/issues"
   },
   "homepage": "https://github.com/logisticinfotech/react-native-datetimepicker#readme",
-  // "copy-license": "cp ../LICENSE ./dist/react-native-datetimepicker",
-  // "copy-readme": "cp ../README.md ./dist/react-native-datetimepicker",
-  // "copy-files": "npm run copy-license && npm run copy-readme"
-}
+  }
