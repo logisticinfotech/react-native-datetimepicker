@@ -1,6 +1,6 @@
 {
   "name": "@logisticinfotech/react-native-horizontal-date-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Horizontal date and time picker for React Native.",
   "main": "HorizontalDatePicker.js",
   "scripts": {

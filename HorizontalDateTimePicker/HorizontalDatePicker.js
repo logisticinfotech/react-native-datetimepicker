@@ -329,7 +329,7 @@ export default class HorizontalDatePicker extends Component {
     } = this.props;
     const { yearSelected, arrayDates, arrayTimes } = this.state;
     return (
-      <View style={styles.mainContainer}>
+      <View>
         {(pickerType === 'date' || pickerType === 'datetime') && isShowYear && (
           <View style={[styles.yearTextContainer, yearContainerStyle]}>
             <Text style={[styles.yearTextStyle, yearTextStyle]}>{yearSelected}</Text>
