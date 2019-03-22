@@ -22,6 +22,8 @@ npm i @logisticinfotech/react-native-horizontal-date-picker
 ```
 import HorizontalDatePicker from "@logisticinfotech/react-native-horizontal-date-picker";
 
+...
+
 <HorizontalDatePicker pickerType="date" />
 
 ```
