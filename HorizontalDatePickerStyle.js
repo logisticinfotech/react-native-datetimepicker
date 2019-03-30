@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 10,
+    backgroundColor: '#00bfa5',
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    marginHorizontal: 5,
   },
   yearTextStyle: {
     fontSize: 15,
@@ -12,7 +16,17 @@ const styles = StyleSheet.create({
   },
   datePickerContainer: {
     height: 60,
-    marginVertical: 5,
+    marginHorizontal: 5,
+    backgroundColor: '#1de9b6',
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
+  },
+  timePickerContainer: {
+    height: 60,
+    marginHorizontal: 5,
+    backgroundColor: '#1de9b6',
+    marginTop: 10,
+    borderRadius: 5,
   },
   flatListStyle: {
     marginHorizontal: 10,
@@ -22,16 +36,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 5,
-    paddingHorizontal: 5,
+    paddingHorizontal: 10,
     marginHorizontal: 5,
   },
   textSelected: {
     fontSize: 15,
-    color: 'steelblue',
+    color: '#f44336',
   },
   textUnSelected: {
     fontSize: 15,
-    color: 'gray',
+    color: '#4A4A4A',
   },
 });
 

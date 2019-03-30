@@ -325,6 +325,7 @@ export default class HorizontalDatePicker extends Component {
       yearContainerStyle,
       yearTextStyle,
       datePickerContainerStyle,
+      timePickerContainerStyle,
       datePickerBG,
     } = this.props;
     const { yearSelected, arrayDates, arrayTimes } = this.state;
@@ -351,7 +352,7 @@ export default class HorizontalDatePicker extends Component {
           </ImageBackground>
         )}
         {(pickerType === 'time' || pickerType === 'datetime') && (
-          <ImageBackground style={[styles.datePickerContainer, datePickerContainerStyle]} source={datePickerBG || null}>
+          <ImageBackground style={[styles.timePickerContainer, timePickerContainerStyle]} source={datePickerBG || null}>
             <FlatList
               ref={this.setTimeFlatListRef}
               horizontal
@@ -379,6 +380,7 @@ HorizontalDatePicker.propTypes = {
   selectedTextStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
   unSelectedTextStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
   datePickerContainerStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
+  timePickerContainerStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
   datePickerBG: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   timePikerBG: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   dayFormat: PropTypes.string,
@@ -401,6 +403,7 @@ HorizontalDatePicker.defaultProps = {
   yearContainerStyle: null,
   yearTextStyle: null,
   datePickerContainerStyle: null,
+  timePickerContainerStyle: null,
   selectedTextStyle: null,
   unSelectedTextStyle: null,
   datePickerBG: null,
@@ -413,7 +416,7 @@ HorizontalDatePicker.defaultProps = {
   returnDateFormat: 'DD-MM-YYYY',
   returnTimeFormat: 'hh:mm a',
   returnDateTimeFormat: 'DD-MM-YYYY hh:mm a',
-  onDateSelected: () => null,
-  onTimeSelected: () => null,
-  onDateTimeSelected: () => null,
+  onDateSelected: () => {},
+  onTimeSelected: () => {},
+  onDateTimeSelected: () => {},
 };

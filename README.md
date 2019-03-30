@@ -14,13 +14,6 @@ https://github.com/logisticinfotech/react-native-datetimepicker
 
 # Guide
 
-# Prerequisite
-you need to install below librabry before use.
-```
-npm i moment
-
-```
-
 # Installation
 ```
 npm i @logisticinfotech/react-native-horizontal-date-picker
@@ -48,7 +41,8 @@ import HorizontalDatePicker from "@logisticinfotech/react-native-horizontal-date
 | maxDate | 3 months from current date | `Date` | Maximum date upto picker value display. |
 | isShowYear | true | `bool` | Dispay year above picker. |
 | yearContainerStyle | null | `style` | Style of the year container. |
-| datePickerContainerStyle | null | `style` | Style of the picker. |
+| datePickerContainerStyle | null | `style` | Style of the date picker. |
+| timePickerContainer | null | `style` | Style of the time picker. |
 | yearTextStyle | null | `style` | Style of the year display. |
 | selectedTextStyle | null | `style` | Style of the selected date or time. |
 | unSelectedTextStyle | null | `style` | Style of the non selected date or time. |
@@ -62,6 +56,6 @@ import HorizontalDatePicker from "@logisticinfotech/react-native-horizontal-date
 | returnDateFormat | DD-MM-YYYY | `string` | Return formate of the date selected. |
 | returnTimeFormat | hh:mm a | `string` | Return formate of the time selected. |
 | returnDateTimeFormat | DD-MM-YYYY hh:mm a | `string` | Return formate of the full datetime selected. |
-| onDateSelected | () => null | `function` | Return date when date is selected. |
-| onTimeSelected | () => null | `function` | Return time when date is selected. |
-| onDateTimeSelected | () => null | `function` | Return object of date, time and datetime when date or time is selected. |
+| onDateSelected | () => {} | `function` | Return date when date is selected. |
+| onTimeSelected | () => {} | `function` | Return time when date is selected. |
+| onDateTimeSelected | () => {} | `function` | Return object of date, time and datetime when date or time is selected. |

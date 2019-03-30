@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
 
 import HorizontalDatePicker from '@logisticinfotech/react-native-horizontal-date-picker';
 export default class App extends Component {
@@ -34,22 +34,33 @@ export default class App extends Component {
 
   onDateTimeSelected = datetime => {
     this.setState({
-      dateTime: JSON.stringify(datetime),
+      dateTime: datetime.datetime,
     });
   };
   render() {
     const { date, time, dateTime } = this.state;
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <HorizontalDatePicker
           onDateSelected={this.onDateSelected}
           onTimeSelected={this.onTimeSelected}
           onDateTimeSelected={this.onDateTimeSelected}
         />
-        <Text style={styles.instructions}>Date:==>{date}</Text>
-        <Text style={styles.instructions}>Time:==>{time}</Text>
-        <Text style={styles.instructions}>DateTime:==>{dateTime}</Text>
-      </View>
+        <View style={styles.gapStyle} />
+
+        <View style={styles.displayContainer}>
+          <Text style={styles.title}>Date:</Text>
+          <Text style={styles.instructions}>{date}</Text>
+        </View>
+        <View style={styles.displayContainer}>
+          <Text style={styles.title}>Time:</Text>
+          <Text style={styles.instructions}>{time}</Text>
+        </View>
+        <View style={styles.displayContainer}>
+          <Text style={styles.title}>DateTime:</Text>
+          <Text style={styles.instructions}>{dateTime}</Text>
+        </View>
+      </SafeAreaView>
     );
   }
 }
@@ -58,12 +69,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
+    paddingVertical: 20,
+  },
+  gapStyle: {
+    height: 50,
+  },
+  displayContainer: {
+    flexDirection: 'row',
+    marginVertical: 10,
+    marginHorizontal: 15,
+  },
+  title: {
+    width: '25%',
+    color: 'red',
+    textAlign: 'left',
+    fontSize: 15,
+    fontWeight: 'bold',
   },
   instructions: {
-    color: '#333333',
-    textAlign: 'center',
+    width: '75%',
+    color: 'steelblue',
+    textAlign: 'left',
     fontSize: 15,
-    marginVertical: 5,
-    marginHorizontal: 10,
+    fontWeight: 'bold',
   },
 });
