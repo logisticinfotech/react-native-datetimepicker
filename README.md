@@ -1,5 +1,5 @@
 <p align="left">
-    <a href="https://www.npmjs.com/package/@logisticinfotech/react-native-horizontal-date-picker"><img alt="npm version" src="https://img.shields.io/badge/npm-v1.0.7-green.svg"></a>
+    <a href="https://www.npmjs.com/package/@logisticinfotech/react-native-horizontal-date-picker"><img alt="npm version" src="https://img.shields.io/badge/npm-v1.0.8-green.svg"></a>
     <a href="https://www.npmjs.com/package/@logisticinfotech/react-native-horizontal-date-picker"><img src="https://img.shields.io/badge/downloads-%3E1K-yellow.svg"></a>
     <a href="https://www.npmjs.com/package/@logisticinfotech/react-native-horizontal-date-picker"<><img src="https://img.shields.io/badge/license-MIT-orange.svg"></a>
 </p>
@@ -39,6 +39,7 @@ import HorizontalDatePicker from "@logisticinfotech/react-native-horizontal-date
 | pickerType | datetime | enum of `["date","time","datetime"]` | Type of the picker user want to display.  |
 | minDate | current date | `Date` | Minimum date from picker value start. |
 | maxDate | 3 months from current date | `Date` | Maximum date upto picker value display. |
+| defaultSelected | null | `Date` | By default selected date and time. |
 | isShowYear | true | `bool` | Dispay year above picker. |
 | yearContainerStyle | null | `style` | Style of the year container. |
 | datePickerContainerStyle | null | `style` | Style of the date picker. |

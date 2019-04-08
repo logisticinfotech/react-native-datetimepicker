@@ -30,6 +30,7 @@ export default class HorizontalDatePicker extends Component {
       returnDateTimeFormat,
       minDate,
       maxDate,
+      defaultSelected,
       dayFormat,
       monthFormat,
       yearFormat,
@@ -76,34 +77,68 @@ export default class HorizontalDatePicker extends Component {
       year: moment(item, defaultFormatDate).format(yearFormat),
       isSelected: false,
     }));
-    if (newDateArray.length > 0) newDateArray[0].isSelected = true;
+    let isCurrentFoundDate = false;
+    if (defaultSelected) {
+      const selectedDate = moment(defaultSelected).format(defaultFormatDate);
+      newDateArray.map(item => {
+        if (item.date === selectedDate) {
+          item.isSelected = true;
+          isCurrentFoundDate = true;
+        }
+      });
+      if (!isCurrentFoundDate) newDateArray[0].isSelected = true;
+    } else if (newDateArray.length > 0) newDateArray[0].isSelected = true;
     const newTimeArray = timeArray.map(item => ({
       time: item,
       timeDisplay: moment(item, defaultFormatTime).format(timeFormat),
       isSelected: false,
     }));
-    if (timeArray.length > 0) newTimeArray[0].isSelected = true;
+    let isCurrentFoundTime = false;
+    if (defaultSelected) {
+      const selectedDate = moment(defaultSelected).format(defaultFormatTime);
+      newTimeArray.map(item => {
+        if (item.time === selectedDate) {
+          item.isSelected = true;
+          isCurrentFoundTime = true;
+        }
+      });
+      if (!isCurrentFoundTime) newDateArray[0].isSelected = true;
+    } else if (timeArray.length > 0) newTimeArray[0].isSelected = true;
     if ((pickerType === 'date' || pickerType == 'datetime') && onDateSelected) {
-      onDateSelected(moment(newDateArray[0].date, defaultFormatDate).format(returnDateFormat));
+      if (defaultSelected && isCurrentFoundDate) {
+        onDateSelected(moment(defaultSelected).format(returnDateFormat));
+      } else {
+        onDateSelected(moment(newDateArray[0].date, defaultFormatDate).format(returnDateFormat));
+      }
     }
     if ((pickerType === 'time' || pickerType == 'datetime') && onTimeSelected) {
-      onTimeSelected(moment(newTimeArray[0].time, defaultFormatTime).format(returnTimeFormat));
+      if (defaultSelected && isCurrentFoundTime) {
+        onDateSelected(moment(defaultSelected).format(returnTimeFormat));
+      } else {
+        onTimeSelected(moment(newTimeArray[0].time, defaultFormatTime).format(returnTimeFormat));
+      }
     }
     if (onDateTimeSelected) {
       onDateTimeSelected({
         date:
           pickerType === 'date' || pickerType == 'datetime'
-            ? moment(newDateArray[0].date, defaultFormatDate).format(returnDateFormat)
+            ? defaultSelected && isCurrentFoundDate
+              ? moment(defaultSelected).format(returnDateFormat)
+              : moment(newDateArray[0].date, defaultFormatDate).format(returnDateFormat)
             : '',
         time:
           pickerType === 'time' || pickerType == 'datetime'
-            ? moment(newTimeArray[0].time, defaultFormatTime).format(returnTimeFormat)
+            ? defaultSelected && isCurrentFoundTime
+              ? moment(defaultSelected).format(returnTimeFormat)
+              : moment(newTimeArray[0].time, defaultFormatTime).format(returnTimeFormat)
             : '',
         datetime:
           pickerType == 'datetime'
-            ? moment(newDateArray[0].date + newTimeArray[0].time, defaultFormatDate + defaultFormatTime).format(
-                returnDateTimeFormat
-              )
+            ? defaultSelected && isCurrentFoundDate && isCurrentFoundTime
+              ? moment(defaultSelected).format(returnDateTimeFormat)
+              : moment(newDateArray[0].date + newTimeArray[0].time, defaultFormatDate + defaultFormatTime).format(
+                  returnDateTimeFormat
+                )
             : '',
       });
     }
@@ -374,6 +409,7 @@ HorizontalDatePicker.propTypes = {
   pickerType: PropTypes.oneOf(['date', 'time', 'datetime']),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
+  defaultSelected: PropTypes.objectOf(Date),
   isShowYear: PropTypes.bool,
   yearContainerStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
   yearTextStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
@@ -399,6 +435,7 @@ HorizontalDatePicker.defaultProps = {
   pickerType: 'datetime',
   minDate: null,
   maxDate: null,
+  defaultSelected: null,
   isShowYear: true,
   yearContainerStyle: null,
   yearTextStyle: null,
