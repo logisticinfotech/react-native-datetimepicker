@@ -14,19 +14,8 @@ https://github.com/logisticinfotech/react-native-datetimepicker
 
 # Guide
 
-# Installation
-```
-npm i @logisticinfotech/react-native-horizontal-date-picker
-```
-# Usage
-```
-import HorizontalDatePicker from "@logisticinfotech/react-native-horizontal-date-picker";
-
-...
-
-<HorizontalDatePicker pickerType="date" />
-
-```
+<!-- # Installation and Usage
+Please check this blog for installation and usage [this link]() -->
 
 ![](RNHorizontalDatePicker.gif)
 

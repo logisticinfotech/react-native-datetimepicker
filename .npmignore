@@ -1,1 +1,4 @@
 example/
+lib/
+.npmignore
+RNHorizontalDatePicker.gif
