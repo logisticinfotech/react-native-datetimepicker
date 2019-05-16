@@ -12,10 +12,8 @@ https://www.npmjs.com/package/@logisticinfotech/react-native-horizontal-date-pic
 ## Git repo
 https://github.com/logisticinfotech/react-native-datetimepicker
 
-# Guide
-
-<!-- # Installation and Usage
-Please check this blog for installation and usage [this link]() -->
+# Installation and Usage
+Please check this blog for installation and usage [this link](https://www.logisticinfotech.com/blog/react-native-horizontal-date-picker-library/)
 
 ![](RNHorizontalDatePicker.gif)
 
