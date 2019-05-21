@@ -4,19 +4,15 @@
     <a href="https://www.npmjs.com/package/@logisticinfotech/react-native-horizontal-date-picker"<><img src="https://img.shields.io/badge/license-MIT-orange.svg"></a>
 </p>
 
-### React Native horizontal date picker
+# React Native horizontal date picker
 
-# Guide
-
-## Installation and Usage
+### Installation and Usage
 
 Please check this blog for installation and usage [this link](https://www.logisticinfotech.com/blog/react-native-horizontal-date-picker-library/)
 
 ![](RNHorizontalDatePicker.gif)
 
-### Properties
-
-#### Basic
+### Basic Properties
 
 | Prop                     | Default                    | Type                                 | Description                                                             |
 | ------------------------ | -------------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
