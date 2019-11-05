@@ -319,13 +319,15 @@ export default class HorizontalDatePicker extends Component {
         <Text
           style={
             item.isSelected ? [styles.textSelected, selectedTextStyle] : [styles.textUnSelected, unSelectedTextStyle]
-          }>
+          }
+        >
           {item.day}
         </Text>
         <Text
           style={
             item.isSelected ? [styles.textSelected, selectedTextStyle] : [styles.textUnSelected, unSelectedTextStyle]
-          }>
+          }
+        >
           {item.month}
         </Text>
       </TouchableOpacity>
@@ -346,7 +348,8 @@ export default class HorizontalDatePicker extends Component {
         <Text
           style={
             item.isSelected ? [styles.textSelected, selectedTextStyle] : [styles.textUnSelected, unSelectedTextStyle]
-          }>
+          }
+        >
           {item.timeDisplay}
         </Text>
       </TouchableOpacity>
@@ -411,12 +414,12 @@ HorizontalDatePicker.propTypes = {
   maxDate: PropTypes.instanceOf(Date),
   defaultSelected: PropTypes.objectOf(Date),
   isShowYear: PropTypes.bool,
-  yearContainerStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
-  yearTextStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
-  selectedTextStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
-  unSelectedTextStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
-  datePickerContainerStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
-  timePickerContainerStyle: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.object])),
+  yearContainerStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  yearTextStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  selectedTextStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  unSelectedTextStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  datePickerContainerStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
+  timePickerContainerStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
   datePickerBG: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   timePikerBG: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   dayFormat: PropTypes.string,
