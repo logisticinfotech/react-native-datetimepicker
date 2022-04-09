@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@logisticinfotech/react-native-horizontal-date-picker": "^1.0.15",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-native": "0.59.1"
